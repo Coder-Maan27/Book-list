@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>School Book Manager</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+          <link rel="stylesheet" href="style.css" />
+          </head>
+          <body class="bg-gray-100 min-h-screen">
+            <div class="max-w-5xl mx-auto p-6">
+                <h1 class="text-3xl font-bold text-center mb-6">📚 School Book List</h1>
+
+                    <!-- Search -->
+                        <input type="text" id="searchInput" onkeyup="filterBooks()" placeholder="Search for a book..." class="w-full p-2 mb-4 border rounded-lg" />
+
+                            <!-- Book List -->
+                                <div id="bookList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+
+                                    <!-- Teacher/Admin Panel -->
+                                        <div class="mt-10">
+                                              <h2 class="text-2xl font-semibold mb-2">🔒 Teacher/Admin Panel</h2>
+                                                    <input type="password" id="adminPassword" placeholder="Enter Teacher Password" class="p-2 border rounded" />
+                                                          <button onclick="authenticateAdmin()" class="bg-blue-600 text-white px-4 py-2 rounded ml-2">Login</button>
+                                                                <div id="adminControls" class="mt-4 hidden">
+                                                                        <h3 class="font-semibold text-lg mb-2">📅 Select Books for Tomorrow:</h3>
+                                                                                <div id="bookSelector" class="space-y-2"></div>
+                                                                                        <button onclick="saveTomorrowBooks()" class="bg-green-600 text-white px-4 py-2 rounded mt-4">Save for Tomorrow</button>
+                                                                                              </div>
+                                                                                                  </div>
+
+                                                                                                      <!-- Tomorrow's Book List -->
+                                                                                                          <div class="mt-10">
+                                                                                                                <h2 class="text-2xl font-semibold mb-2">📘 Books Needed for Tomorrow:</h2>
+                                                                                                                      <ul id="tomorrowList" class="list-disc list-inside text-lg"></ul>
+                                                                                                                          </div>
+                                                                                                                            </div>
+
+                                                                                                                              <script src="script.js"></script>
+                                                                                                                              </body>
+                                                                                                                              </html

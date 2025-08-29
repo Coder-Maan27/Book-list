@@ -1,0 +1,20 @@
+/* Custom styles */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="text"],
+input[type="password"] {
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  box-shadow: 0 0 0 2px #60a5fa; /* Tailwind blue-400 */
+}
+
+button:active {
+  transform: scale(0.98);
+}
